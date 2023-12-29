@@ -7,7 +7,7 @@ url = 'http://192.168.160.54:8082'
 def send(number, message):
     try:
         x = requests.post(url, json={'to': number, 'message': message}, headers={"Authorization": api})
-        if x.status_code == 202:
+        if x.status_code == 200:
             return True
         else:
             return False
